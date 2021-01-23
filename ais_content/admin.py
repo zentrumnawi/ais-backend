@@ -13,10 +13,7 @@ class WareInline(admin.StackedInline):
 
 class FindModelAdmin(admin.ModelAdmin):
     list_display = ("id", "name")
-    inlines = [
-        FormalAspectInline,
-        WareInline
-    ]
+    inlines = [FormalAspectInline, WareInline]
 
 
 admin.site.register(FormalAspect, admin.ModelAdmin)

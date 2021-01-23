@@ -1,9 +1,9 @@
 from rest_framework import serializers
+
 from .models import Find, FormalAspect, Ware
 
 
 class DisplayNameModelSerializer(serializers.ModelSerializer):
-
     def to_representation(self, instance):
         ret = super(DisplayNameModelSerializer, self).to_representation(instance)
 
@@ -11,23 +11,17 @@ class DisplayNameModelSerializer(serializers.ModelSerializer):
 
 
 class FormalAspectSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = FormalAspect
         exclude = ["find"]
-        swagger_schema_fields = {
-            "title": str(model._meta.verbose_name)
-        }
+        swagger_schema_fields = {"title": str(model._meta.verbose_name)}
 
 
 class WareSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Ware
         exclude = ["find"]
-        swagger_schema_fields = {
-            "title": str(model._meta.verbose_name)
-        }
+        swagger_schema_fields = {"title": str(model._meta.verbose_name)}
 
 
 class FindSerializer(serializers.ModelSerializer):

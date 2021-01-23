@@ -1,4 +1,3 @@
-
 SHARD_CHOICES = (
     ("Rand", "Rand"),
     ("Mündung", "Mündung"),
@@ -13,7 +12,7 @@ SHARD_CHOICES = (
     ("Standfuß", "Standfuß"),
     ("Standring", "Standring"),
     ("Knauffuß", "Knauffuß"),
-    ("Ganzes Gefäß", "Ganzes Gefäß")
+    ("Ganzes Gefäß", "Ganzes Gefäß"),
 )
 
 USAGE_CHOCIES = (
@@ -26,7 +25,7 @@ USAGE_CHOCIES = (
     ("Vorratsgeschirr", "Vorratsgeschirr"),
     ("Servicegeschirr", "Servicegeschirr"),
     ("Sonstige Verwendung", "Sonstige Verwendung"),
-    ("Unbekannt", "Unbekannt")
+    ("Unbekannt", "Unbekannt"),
 )
 
 SURFACE_CHOICES = (
@@ -51,13 +50,16 @@ CONSERV_CHOICES = (
     ("Gut", "Gut"),
     ("Mäßig", "Mäßig"),
     ("Stark fragmentiert", "Stark fragmentiert"),
-    ("Schlecht", "Schlecht")
+    ("Schlecht", "Schlecht"),
 )
 
 MAN_CHOICES = (
     ("Freigeformt / Handgemacht", "Freigeformt / Handgemacht"),
     ("Langsame Töpferscheibe", "Langsame Töpferscheibe"),
-    ("Scheibengedreht (Schnelle Töpferscheibe)", "Scheibengedreht (Schnelle Töpferscheibe)"),
+    (
+        "Scheibengedreht (Schnelle Töpferscheibe)",
+        "Scheibengedreht (Schnelle Töpferscheibe)",
+    ),
     ("Modelgeformt", "Modelgeformt"),
     ("Kombinierte Technik", "Kombinierte Technik"),
     ("Sonstiges", "Sonstiges"),
@@ -78,7 +80,10 @@ BRAND_ATM_CHOICES = (
 ORNAM_CHOICES = (
     ("kammstrichverziert", "kammstrichverziert"),
     ("mit Applikation versehen (frei Hand)", "mit Applikation versehen (frei Hand)"),
-    ("mt Applikation versehen (aus der Model)", "mt Applikation versehen (aus der Model)"),
+    (
+        "mt Applikation versehen (aus der Model)",
+        "mt Applikation versehen (aus der Model)",
+    ),
     ("bemalt", "bemalt"),
     ("glasiert", "glasiert"),
     ("monochrom bemalt", "monochrom bemalt"),
@@ -88,46 +93,55 @@ ORNAM_CHOICES = (
     ("unverziert", "unverziert"),
     ("modelgeformt ", "modelgeformt"),
     ("Sonstiges", "Sonstiges"),
-    ("Komplexe Merkmalskombination", "Komplexe Merkmalskombination")
+    ("Komplexe Merkmalskombination", "Komplexe Merkmalskombination"),
 )
 
 MAGER_CHOICES = (
     ("Ungemagert", "Ungemagert"),
     ("Vegetabil", "Vegetabil"),
     ("Vegetabil mit mineralischem Beischlag", "Vegetabil mit mineralischem Beischlag"),
-    ("Vegetabil mit Schamott und mineralischem Beischlag", "Vegetabil mit Schamott und mineralischem Beischlag"),
+    (
+        "Vegetabil mit Schamott und mineralischem Beischlag",
+        "Vegetabil mit Schamott und mineralischem Beischlag",
+    ),
     ("Mineralisch", "Mineralisch"),
     ("Mineralisch mit vegetabilem Beischlag", "Mineralisch mit vegetabilem Beischlag"),
-    ("Mineralisch mit Schamott und vegetabilem Beischlag", "Mineralisch mit Schamott und vegetabilem Beischlag"),
+    (
+        "Mineralisch mit Schamott und vegetabilem Beischlag",
+        "Mineralisch mit Schamott und vegetabilem Beischlag",
+    ),
     ("Schamott", "Schamott"),
     ("Schamott mit vegetabilem Beischlag", "Schamott mit vegetabilem Beischlag"),
     ("Schamott mit mineralischem Beischlag", "Schamott mit mineralischem Beischlag"),
-    ("Schamott mit vegetabilem und mineralischem Beischlag", "Schamott mit vegetabilem und mineralischem Beischlag"),
+    (
+        "Schamott mit vegetabilem und mineralischem Beischlag",
+        "Schamott mit vegetabilem und mineralischem Beischlag",
+    ),
     ("Komplexe Merkmalskombination", "Komplexe Merkmalskombination"),
     ("Weiteres ", "Weiteres"),
 )
 MAGER_MENGE_CHOICES = (
     ("0%", "0%"),
-    ('1-5%', '1-5%'),
-    ('6-10%', '6-10%'),
-    ('11-15%', '11-15%'),
-    ('16-20%', '16-20%'),
-    ('21-25%', '21-25%'),
-    ('26-30%', '26-30%'),
-    ('31-35%', '31-35%'),
-    ('36-40%', '36-40%'),
-    ('41-45%', '41-45%'),
-    ('46-50%', '46-50%'),
-    ('51-55%', '51-55%'),
-    ('56-60%', '56-60%'),
-    ('61-65%', '61-65%'),
-    ('66-70%', '66-70%'),
-    ('71-75%', '71-75%'),
-    ('76-80%', '76-80%'),
-    ('81-85%', '81-85%'),
-    ('86-90%', '86-90%'),
-    ('91-95%', '91-95%'),
-    ('96-100%', '96-100%')
+    ("1-5%", "1-5%"),
+    ("6-10%", "6-10%"),
+    ("11-15%", "11-15%"),
+    ("16-20%", "16-20%"),
+    ("21-25%", "21-25%"),
+    ("26-30%", "26-30%"),
+    ("31-35%", "31-35%"),
+    ("36-40%", "36-40%"),
+    ("41-45%", "41-45%"),
+    ("46-50%", "46-50%"),
+    ("51-55%", "51-55%"),
+    ("56-60%", "56-60%"),
+    ("61-65%", "61-65%"),
+    ("66-70%", "66-70%"),
+    ("71-75%", "71-75%"),
+    ("76-80%", "76-80%"),
+    ("81-85%", "81-85%"),
+    ("86-90%", "86-90%"),
+    ("91-95%", "91-95%"),
+    ("96-100%", "96-100%"),
 )
 
 MAGER_SIZE_CHOICES = (
@@ -149,4 +163,3 @@ MAGER_FORM_CHOICES = (
     ("Muschelig", "Muschelig"),
     ("Winkelig", "Winkelig"),
 )
-
