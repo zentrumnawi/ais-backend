@@ -1,6 +1,6 @@
 [tool]
 [tool.poetry]
-name = "ais"
+name = "ais-backend"
 description = "This is the backend for the project Archäologie in Scherben - AiS."
 authors = ["Christian Grossmüller",]
 version = "0.0.1"
