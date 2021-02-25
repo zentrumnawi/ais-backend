@@ -28,14 +28,6 @@ class Find(BaseProfile):
         max_length=400, null=True, blank=True, verbose_name=_("Beschreibung")
     )
 
-    systematics = models.ForeignKey(
-        TreeNode,
-        related_name="profiles",
-        on_delete=models.DO_NOTHING,
-        null=True,
-        verbose_name=_("Steckbrief-Ebene"),
-    )
-
     class Meta:
         verbose_name = _("Fundstück")
         verbose_name_plural = _("Fundstücke")
