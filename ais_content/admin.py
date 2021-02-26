@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from .models import Find, FormalAspect, Ware
+from solid_backend.photograph.admin import PhotographInline
 
 
 class FormalAspectInline(admin.StackedInline):
@@ -13,7 +14,7 @@ class WareInline(admin.StackedInline):
 
 class FindModelAdmin(admin.ModelAdmin):
     list_display = ("id", "name")
-    inlines = [FormalAspectInline, WareInline]
+    inlines = [FormalAspectInline, WareInline, PhotographInline]
 
 
 admin.site.register(FormalAspect, admin.ModelAdmin)
