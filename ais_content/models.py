@@ -85,7 +85,7 @@ class Ware(models.Model):
         seperators=[", ", " und "],
         default="",
         blank=True,
-        verbose_name=_("Verzeirungsart"),
+        verbose_name=_("Verzierungsart"),
     )
     magerungsart = models.CharField(
         max_length=52, choices=MAGER_CHOICES, verbose_name=_("Magerungsart")
