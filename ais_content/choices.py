@@ -151,7 +151,7 @@ MAGER_SIZE_CHOICES = (
     ("klein", "klein"),
     ("mittel", "mittel"),
     ("groß", "groß"),
-    ("sehr Groß", "sehr Groß"),
+    ("sehr groß", "sehr groß"),
 )
 
 MAGER_DIST_CHOICES = (
