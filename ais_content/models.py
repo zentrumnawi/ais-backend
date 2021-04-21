@@ -71,13 +71,25 @@ class FormalAspect(models.Model):
 class Ware(models.Model):
 
     manufacture = models.CharField(
-        max_length=40, null=True, blank=True, choices=MAN_CHOICES, verbose_name=_("Herstellungsart")
+        max_length=40,
+        null=True,
+        blank=True,
+        choices=MAN_CHOICES,
+        verbose_name=_("Herstellungsart"),
     )
     brand = models.CharField(
-        max_length=13, null=True, blank=True, choices=BRAND_CHOICES, verbose_name=_("Brand")
+        max_length=13,
+        null=True,
+        blank=True,
+        choices=BRAND_CHOICES,
+        verbose_name=_("Brand"),
     )
     brand_atm = models.CharField(
-        max_length=21, null=True, blank=True, choices=BRAND_ATM_CHOICES, verbose_name=_("Brennatmosphäre")
+        max_length=21,
+        null=True,
+        blank=True,
+        choices=BRAND_ATM_CHOICES,
+        verbose_name=_("Brennatmosphäre"),
     )
     color = models.CharField(max_length=200, verbose_name=_("Farbe"))
     ornament = ConcatCharField(
@@ -89,19 +101,39 @@ class Ware(models.Model):
         verbose_name=_("Verzierungsart"),
     )
     magerungsart = models.CharField(
-        max_length=52, null=True, blank=True, choices=MAGER_CHOICES, verbose_name=_("Magerungsart")
+        max_length=52,
+        null=True,
+        blank=True,
+        choices=MAGER_CHOICES,
+        verbose_name=_("Magerungsart"),
     )
     magerungsmenge = models.CharField(
-        max_length=7, null=True, blank=True, choices=MAGER_MENGE_CHOICES, verbose_name=_("Magerungsmenge")
+        max_length=7,
+        null=True,
+        blank=True,
+        choices=MAGER_MENGE_CHOICES,
+        verbose_name=_("Magerungsmenge"),
     )
     magerung_size = models.CharField(
-        max_length=10, null=True, blank=True, choices=MAGER_SIZE_CHOICES, verbose_name=_("Magerungsgröße")
+        max_length=10,
+        null=True,
+        blank=True,
+        choices=MAGER_SIZE_CHOICES,
+        verbose_name=_("Magerungsgröße"),
     )
     magerung_dist = models.CharField(
-        max_length=20, null=True, blank=True, choices=MAGER_DIST_CHOICES, verbose_name=_("Magerungsverteilung")
+        max_length=20,
+        null=True,
+        blank=True,
+        choices=MAGER_DIST_CHOICES,
+        verbose_name=_("Magerungsverteilung"),
     )
     magerung_form = models.CharField(
-        max_length=9, null=True, blank=True, choices=MAGER_FORM_CHOICES, verbose_name=_("Magerungsform")
+        max_length=9,
+        null=True,
+        blank=True,
+        choices=MAGER_FORM_CHOICES,
+        verbose_name=_("Magerungsform"),
     )
 
     note = models.TextField(
