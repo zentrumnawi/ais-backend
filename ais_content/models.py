@@ -8,6 +8,7 @@ from .choices import *
 
 class Find(BaseProfile):
     name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
+    origin = models.TextField(max_length=500, blank=True, verbose_name=_("Herkunft"))
     storage = models.CharField(
         max_length=300, null=True, blank=True, verbose_name=_("Stadt, Museum/ Sammlung")
     )
