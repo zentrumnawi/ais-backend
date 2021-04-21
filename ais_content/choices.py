@@ -55,35 +55,36 @@ CONSERV_CHOICES = (
 )
 
 MAN_CHOICES = (
-    ("Freigeformt / Handgemacht", "Freigeformt / Handgemacht"),
-    ("Langsame Töpferscheibe", "Langsame Töpferscheibe"),
+    ("freigeformt / Handgemacht", "freigeformt / Handgemacht"),
+    ("langsame Töpferscheibe", "langsame Töpferscheibe"),
     (
-        "Scheibengedreht (Schnelle Töpferscheibe)",
-        "Scheibengedreht (Schnelle Töpferscheibe)",
+        "scheibengedreht (Schnelle Töpferscheibe)",
+        "scheibengedreht (Schnelle Töpferscheibe)",
     ),
-    ("Modelgeformt", "Modelgeformt"),
-    ("Kombinierte Technik", "Kombinierte Technik"),
-    ("Sonstiges", "Sonstiges"),
+    ("modelgeformt", "modelgeformt"),
+    ("kombinierte Technik", "kombinierte Technik"),
+    ("sonstiges", "sonstiges"),
 )
 
 BRAND_CHOICES = (
-    ("Weich", "Weich"),
-    ("Mittel", "Mittel"),
-    ("Hart", "Hart"),
-    ("Klingend hart", "Klingend hart"),
+    ("weich", "weich"),
+    ("mittel", "mittel"),
+    ("hart", "hart"),
+    ("klingend hart", "klingend hart"),
 )
 BRAND_ATM_CHOICES = (
-    ("Reduzierender Brand", "Reduzierender Brand"),
-    ("Oxidierender Brand", "Oxidierender Brand"),
-    ("Kombinierte Verfahren", "Kombinierte Verfahren"),
+    ("reduzierender Brand", "reduzierender Brand"),
+    ("oxidierender Brand", "oxidierender Brand"),
+    ("kombinierte Verfahren", "kombinierte Verfahren"),
 )
 
 ORNAM_CHOICES = (
+    (None, "---------"),
     ("kammstrichverziert", "kammstrichverziert"),
     ("mit Applikation versehen (frei Hand)", "mit Applikation versehen (frei Hand)"),
     (
-        "mt Applikation versehen (aus der Model)",
-        "mt Applikation versehen (aus der Model)",
+        "mit Applikation versehen (aus der Model)",
+        "mit Applikation versehen (aus der Model)",
     ),
     ("bemalt", "bemalt"),
     ("glasiert", "glasiert"),
@@ -98,18 +99,18 @@ ORNAM_CHOICES = (
 )
 
 MAGER_CHOICES = (
-    ("Ungemagert", "Ungemagert"),
-    ("Vegetabil", "Vegetabil"),
-    ("Vegetabil mit mineralischem Beischlag", "Vegetabil mit mineralischem Beischlag"),
+    ("ungemagert", "ungemagert"),
+    ("vegetabil", "vegetabil"),
+    ("vegetabil mit mineralischem Beischlag", "vegetabil mit mineralischem Beischlag"),
     (
-        "Vegetabil mit Schamott und mineralischem Beischlag",
-        "Vegetabil mit Schamott und mineralischem Beischlag",
+        "vegetabil mit Schamott und mineralischem Beischlag",
+        "vegetabil mit Schamott und mineralischem Beischlag",
     ),
-    ("Mineralisch", "Mineralisch"),
-    ("Mineralisch mit vegetabilem Beischlag", "Mineralisch mit vegetabilem Beischlag"),
+    ("mineralisch", "mineralisch"),
+    ("mineralisch mit vegetabilem Beischlag", "mineralisch mit vegetabilem Beischlag"),
     (
-        "Mineralisch mit Schamott und vegetabilem Beischlag",
-        "Mineralisch mit Schamott und vegetabilem Beischlag",
+        "mineralisch mit Schamott und vegetabilem Beischlag",
+        "mineralisch mit Schamott und vegetabilem Beischlag",
     ),
     ("Schamott", "Schamott"),
     ("Schamott mit vegetabilem Beischlag", "Schamott mit vegetabilem Beischlag"),
@@ -118,7 +119,7 @@ MAGER_CHOICES = (
         "Schamott mit vegetabilem und mineralischem Beischlag",
         "Schamott mit vegetabilem und mineralischem Beischlag",
     ),
-    ("Komplexe Merkmalskombination", "Komplexe Merkmalskombination"),
+    ("komplexe Merkmalskombination", "komplexe Merkmalskombination"),
     ("Weiteres ", "Weiteres"),
 )
 MAGER_MENGE_CHOICES = (
@@ -146,21 +147,21 @@ MAGER_MENGE_CHOICES = (
 )
 
 MAGER_SIZE_CHOICES = (
-    ("Sehr klein", "Sehr klein"),
-    ("Klein", "Klein"),
-    ("Mittel", "Mittel"),
-    ("Groß", "Groß"),
-    ("Sehr Groß", "Sehr Groß"),
+    ("sehr klein", "sehr klein"),
+    ("klein", "klein"),
+    ("mittel", "mittel"),
+    ("groß", "groß"),
+    ("sehr Groß", "sehr Groß"),
 )
 
 MAGER_DIST_CHOICES = (
-    ("Zufällig verteilt", "Zufällig verteilt"),
-    ("Gleichmäßig verteilt", "Gleichmäßig verteilt"),
+    ("zufällig verteilt", "zufällig verteilt"),
+    ("gleichmäßig verteilt", "gleichmäßig verteilt"),
 )
 
 MAGER_FORM_CHOICES = (
-    ("Rundlich", "Rundlich"),
-    ("Länglich", "Länglich"),
-    ("Muschelig", "Muschelig"),
-    ("Winkelig", "Winkelig"),
+    ("rundlich", "rundlich"),
+    ("länglich", "länglich"),
+    ("muschelig", "muschelig"),
+    ("winkelig", "winkelig"),
 )

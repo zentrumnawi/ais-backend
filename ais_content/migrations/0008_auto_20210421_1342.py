@@ -26,7 +26,6 @@ def conservation_uppercase(apps, schema_editor):
         obj.save()
 
 
-
 class Migration(migrations.Migration):
 
     dependencies = [
