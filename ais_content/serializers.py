@@ -1,7 +1,7 @@
 from rest_framework import serializers
+from solid_backend.photograph.serializers import PhotographSerializer
 
 from .models import Find, FormalAspect, Ware
-from solid_backend.photograph.serializers import PhotographSerializer
 
 
 class DisplayNameModelSerializer(serializers.ModelSerializer):

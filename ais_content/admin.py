@@ -1,7 +1,7 @@
 from django.contrib import admin
+from solid_backend.photograph.admin import PhotographInline
 
 from .models import Find, FormalAspect, Ware
-from solid_backend.photograph.admin import PhotographInline
 
 
 class FormalAspectInline(admin.StackedInline):
