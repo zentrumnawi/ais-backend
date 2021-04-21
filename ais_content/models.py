@@ -8,6 +8,7 @@ from .choices import *
 
 class Find(BaseProfile):
     name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
+    origin = models.TextField(max_length=500, blank=True, verbose_name=_("Herkunft"))
     storage = models.CharField(
         max_length=300, null=True, blank=True, verbose_name=_("Stadt, Museum/ Sammlung")
     )
@@ -53,7 +54,7 @@ class FormalAspect(models.Model):
     conserv = models.CharField(
         max_length=21, choices=CONSERV_CHOICES, verbose_name=_("Erhaltung")
     )
-    measures = models.CharField(max_length=200, verbose_name=_("Maße"))
+    measures = models.CharField(max_length=200, verbose_name=_("Maße (in cm)"))
 
     find = models.OneToOneField(
         Find,
@@ -63,7 +64,7 @@ class FormalAspect(models.Model):
     )
 
     class Meta:
-        verbose_name = _("Formale Aspkete")
+        verbose_name = _("Formale Aspekte")
         verbose_name_plural = verbose_name
 
 

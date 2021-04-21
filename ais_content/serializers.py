@@ -1,7 +1,7 @@
 from rest_framework import serializers
+from solid_backend.photograph.serializers import PhotographSerializer
 
 from .models import Find, FormalAspect, Ware
-from solid_backend.photograph.serializers import PhotographSerializer
 
 
 class DisplayNameModelSerializer(serializers.ModelSerializer):
@@ -11,21 +11,21 @@ class DisplayNameModelSerializer(serializers.ModelSerializer):
         return serializers.OrderedDict(filter(lambda x: not x[1] is None, ret.items()))
 
 
-class FormalAspectSerializer(serializers.ModelSerializer):
+class FormalAspectSerializer(DisplayNameModelSerializer):
     class Meta:
         model = FormalAspect
         exclude = ["find"]
         swagger_schema_fields = {"title": str(model._meta.verbose_name)}
 
 
-class WareSerializer(serializers.ModelSerializer):
+class WareSerializer(DisplayNameModelSerializer):
     class Meta:
         model = Ware
         exclude = ["find"]
         swagger_schema_fields = {"title": str(model._meta.verbose_name)}
 
 
-class FindSerializer(serializers.ModelSerializer):
+class FindSerializer(DisplayNameModelSerializer):
     formal_aspect = FormalAspectSerializer()
     ware = WareSerializer()
     photographs = PhotographSerializer(many=True)
