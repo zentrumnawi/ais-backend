@@ -54,7 +54,7 @@ class FormalAspect(models.Model):
     conserv = models.CharField(
         max_length=21, choices=CONSERV_CHOICES, verbose_name=_("Erhaltung")
     )
-    measures = models.CharField(max_length=200, verbose_name=_("Maße"))
+    measures = models.CharField(max_length=200, verbose_name=_("Maße (in cm)"))
 
     find = models.OneToOneField(
         Find,
@@ -64,7 +64,7 @@ class FormalAspect(models.Model):
     )
 
     class Meta:
-        verbose_name = _("Formale Aspkete")
+        verbose_name = _("Formale Aspekte")
         verbose_name_plural = verbose_name
 
 

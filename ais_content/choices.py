@@ -29,6 +29,7 @@ USAGE_CHOCIES = (
 )
 
 SURFACE_CHOICES = (
+    (None, "---------"),
     ("unbehandelt", "unbehandelt"),
     ("geglättet", "geglättet"),
     ("poliert", "poliert"),
@@ -44,13 +45,13 @@ SURFACE_CHOICES = (
     ("komplexe Merkmalskombination", "komplexe Merkmalskombination"),
 )
 CONSERV_CHOICES = (
-    ("Vollständig", "Vollständig"),
-    ("Annähernd vollständig", "Annähernd vollständig"),
-    ("Sehr gut", "Sehr gut"),
-    ("Gut", "Gut"),
-    ("Mäßig", "Mäßig"),
-    ("Stark fragmentiert", "Stark fragmentiert"),
-    ("Schlecht", "Schlecht"),
+    ("vollständig", "vollständig"),
+    ("annähernd vollständig", "annähernd vollständig"),
+    ("sehr gut", "sehr gut"),
+    ("gut", "gut"),
+    ("mäßig", "mäßig"),
+    ("stark fragmentiert", "stark fragmentiert"),
+    ("schlecht", "schlecht"),
 )
 
 MAN_CHOICES = (
