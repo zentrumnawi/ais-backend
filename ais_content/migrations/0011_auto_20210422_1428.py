@@ -6,18 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ais_content', '0010_auto_20210421_1646'),
+        ("ais_content", "0010_auto_20210421_1646"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='find',
-            name='storage',
-            field=models.CharField(blank=True, max_length=300, null=True, verbose_name='Stadt, Museum/Sammlung'),
+            model_name="find",
+            name="storage",
+            field=models.CharField(
+                blank=True,
+                max_length=300,
+                null=True,
+                verbose_name="Stadt, Museum/Sammlung",
+            ),
         ),
         migrations.AlterField(
-            model_name='ware',
-            name='color',
-            field=models.CharField(blank=True, max_length=200, null=True, verbose_name='Farbe'),
+            model_name="ware",
+            name="color",
+            field=models.CharField(
+                blank=True, max_length=200, null=True, verbose_name="Farbe"
+            ),
         ),
     ]

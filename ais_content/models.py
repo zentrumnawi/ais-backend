@@ -91,7 +91,9 @@ class Ware(models.Model):
         choices=BRAND_ATM_CHOICES,
         verbose_name=_("Brennatmosphäre"),
     )
-    color = models.CharField(max_length=200, null=True, blank=True, verbose_name=_("Farbe"))
+    color = models.CharField(
+        max_length=200, null=True, blank=True, verbose_name=_("Farbe")
+    )
     ornament = ConcatCharField(
         max_length=200,
         concat_choices=[ORNAM_CHOICES, ORNAM_CHOICES, ORNAM_CHOICES],
