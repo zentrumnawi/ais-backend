@@ -27,7 +27,7 @@ class WareSerializer(DisplayNameModelSerializer):
 
 class FindSerializer(DisplayNameModelSerializer):
     formal_aspect = FormalAspectSerializer()
-    ware = WareSerializer()
+    ware = WareSerializer(required=False)
     photographs = PhotographSerializer(many=True)
 
     class Meta:
