@@ -32,7 +32,7 @@ class Find(BaseProfile):
     class Meta:
         verbose_name = _("Fundstück")
         verbose_name_plural = _("Fundstücke")
-        ordering = ("name", )
+        ordering = ("name",)
 
 
 class FormalAspect(models.Model):

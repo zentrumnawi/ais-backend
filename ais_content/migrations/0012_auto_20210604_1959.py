@@ -6,12 +6,16 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ais_content', '0011_auto_20210422_1428'),
+        ("ais_content", "0011_auto_20210422_1428"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='find',
-            options={'ordering': ('name',), 'verbose_name': 'Fundstück', 'verbose_name_plural': 'Fundstücke'},
+            name="find",
+            options={
+                "ordering": ("name",),
+                "verbose_name": "Fundstück",
+                "verbose_name_plural": "Fundstücke",
+            },
         ),
     ]
