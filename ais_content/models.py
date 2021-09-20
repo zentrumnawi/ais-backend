@@ -1,12 +1,12 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from solid_backend.content.fields import ConcatCharField, FromToConcatField
-from solid_backend.content.models import BaseProfile, TreeNode
+from solid_backend.content.models import BaseProfile, TreeNode, SolidBaseProfile
 
 from .choices import *
 
 
-class Find(BaseProfile):
+class Find(BaseProfile, SolidBaseProfile):
     name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
     origin = models.TextField(max_length=500, blank=True, verbose_name=_("Herkunft"))
     storage = models.CharField(

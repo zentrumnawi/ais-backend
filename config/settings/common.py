@@ -35,14 +35,16 @@ INSTALLED_APPS = [
     "mptt",
     "stdimage",
     "corsheaders",
-    "ais_content.apps.AisContentConfig",
+    "taggit",
     "solid_backend.content",
     "solid_backend.contact",
     "solid_backend.glossary",
     "solid_backend.message",
     "solid_backend.slideshow",
     "solid_backend.quiz",
-    "solid_backend.photograph",
+    "solid_backend.photograph.apps.PhotographConfig",
+    "solid_backend.media_object",
+    "ais_content.apps.AisContentConfig",
     "django_cleanup.apps.CleanupConfig",  # Should be placed last!
 ]
 
