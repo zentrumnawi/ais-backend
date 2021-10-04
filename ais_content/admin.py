@@ -19,7 +19,7 @@ class FindModelAdmin(admin.ModelAdmin):
         FormalAspectInline,
         WareInline,
         ImageMediaObjectInline,
-        AudioVideoMediaObjectInline,PhotographInline
+        AudioVideoMediaObjectInline
     ]
 
 
