@@ -23,12 +23,16 @@ def migrate_Photograph_to_MediaObject(apps, schema_editor):
             if photo.audio:
                 audio_file = photo.audio
                 audio_file.name = audio_file.name.split("/")[-1]
+            _dzi_file = None
+            if photo.dzi_option:
+                _dzi_file = photo.dzi_file
 
             MediaObject.objects.create(
                 profile_position=photo.profile_position,
                 media_format="image",
                 file=_file,
                 dzi_option=photo.dzi_option,
+                dzi_file=_dzi_file,
                 img_original_width=photo.img_original_width,
                 img_original_height=photo.img_original_height,
                 img_original_scale=photo.img_original_scale,
