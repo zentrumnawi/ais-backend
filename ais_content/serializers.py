@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from solid_backend.photograph.serializers import PhotographSerializer
+from solid_backend.media_object.serializers import MediaObjectSerializer
 
 from .models import Find, FormalAspect, Ware
 
@@ -28,7 +29,7 @@ class WareSerializer(DisplayNameModelSerializer):
 class FindSerializer(DisplayNameModelSerializer):
     formal_aspect = FormalAspectSerializer()
     ware = WareSerializer(required=False)
-    photographs = PhotographSerializer(many=True)
+    media_objects = MediaObjectSerializer(many=True)
 
     class Meta:
         model = Find
