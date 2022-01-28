@@ -23,7 +23,7 @@ class Find(BaseProfile, SolidBaseProfile):
         verbose_name=_("Inventarnummer"),
     )
 
-    source = models.CharField(max_length=300, null=True, verbose_name=_("Publikation"))
+    source = models.CharField(max_length=300, null=True, blank=True, verbose_name=_("Publikation"))
 
     description = models.TextField(
         max_length=400, null=True, blank=True, verbose_name=_("Beschreibung")
