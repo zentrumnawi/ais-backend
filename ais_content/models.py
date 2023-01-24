@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from solid_backend.content.fields import ConcatCharField, FromToConcatField
-from solid_backend.content.models import BaseProfile, TreeNode, SolidBaseProfile
+from solid_backend.content.models import BaseProfile, SolidBaseProfile, TreeNode
 
 from .choices import *
 
@@ -23,7 +23,9 @@ class Find(BaseProfile, SolidBaseProfile):
         verbose_name=_("Inventarnummer"),
     )
 
-    source = models.CharField(max_length=300, null=True, blank=True, verbose_name=_("Publikation"))
+    source = models.CharField(
+        max_length=300, null=True, blank=True, verbose_name=_("Publikation")
+    )
 
     description = models.TextField(
         max_length=400, null=True, blank=True, verbose_name=_("Beschreibung")

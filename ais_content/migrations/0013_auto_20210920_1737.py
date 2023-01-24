@@ -84,9 +84,9 @@ def migrate_MediaObject_to_Photograph(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ais_content', '0012_auto_20210604_1959'),
+        ("ais_content", "0012_auto_20210604_1959"),
         ("photograph", "0006_add_profile_position_field"),
-        ("media_object", "0002_audiovideomediaobject_imagemediaobject")
+        ("media_object", "0002_audiovideomediaobject_imagemediaobject"),
     ]
 
     operations = [

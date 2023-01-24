@@ -1,6 +1,9 @@
 from django.contrib import admin
+from solid_backend.media_object.admin import (
+    AudioVideoMediaObjectInline,
+    ImageMediaObjectInline,
+)
 from solid_backend.photograph.admin import PhotographInline
-from solid_backend.media_object.admin import ImageMediaObjectInline, AudioVideoMediaObjectInline
 
 from .models import Find, FormalAspect, Ware
 
@@ -19,7 +22,7 @@ class FindModelAdmin(admin.ModelAdmin):
         FormalAspectInline,
         WareInline,
         ImageMediaObjectInline,
-        AudioVideoMediaObjectInline
+        AudioVideoMediaObjectInline,
     ]
 
 
