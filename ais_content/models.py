@@ -1,38 +1,39 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from solid_backend.content.fields import ConcatCharField, FromToConcatField
-from solid_backend.content.models import BaseProfile, TreeNode, SolidBaseProfile
+from solid_backend.content.models import BaseProfile, SolidBaseProfile, TreeNode
 
 from .choices import *
 
 
-class Find(BaseProfile, SolidBaseProfile):
-    name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
-    origin = models.TextField(max_length=500, blank=True, verbose_name=_("Herkunft"))
-    storage = models.CharField(
-        max_length=300, null=True, blank=True, verbose_name=_("Stadt, Museum/Sammlung")
-    )
-    find_number = models.CharField(
-        max_length=200, null=True, blank=True, verbose_name=_("Fundnummer")
-    )
-    inven_number = models.CharField(
-        max_length=200,
-        default="",
-        blank=True,
-        null=True,
-        verbose_name=_("Inventarnummer"),
-    )
+class Find(SolidBaseProfile):
 
-    source = models.CharField(max_length=300, null=True, blank=True, verbose_name=_("Publikation"))
-
-    description = models.TextField(
-        max_length=400, null=True, blank=True, verbose_name=_("Beschreibung")
-    )
+    # name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
+    # origin = models.TextField(max_length=500, blank=True, verbose_name=_("Herkunft"))
+    # storage = models.CharField(
+    #     max_length=300, null=True, blank=True, verbose_name=_("Stadt, Museum/Sammlung")
+    # )
+    # find_number = models.CharField(
+    #     max_length=200, null=True, blank=True, verbose_name=_("Fundnummer")
+    # )
+    # inven_number = models.CharField(
+    #     max_length=200,
+    #     default="",
+    #     blank=True,
+    #     null=True,
+    #     verbose_name=_("Inventarnummer"),
+    # )
+    #
+    # source = models.CharField(max_length=300, null=True, blank=True, verbose_name=_("Publikation"))
+    #
+    # description = models.TextField(
+    #     max_length=400, null=True, blank=True, verbose_name=_("Beschreibung")
+    # )
 
     class Meta:
         verbose_name = _("Fundstück")
         verbose_name_plural = _("Fundstücke")
-        ordering = ("name",)
+        # ordering = ("name",)
 
 
 class FormalAspect(models.Model):
@@ -150,3 +151,35 @@ class Ware(models.Model):
     class Meta:
         verbose_name = _("Ware")
         verbose_name_plural = _("Waren")
+
+
+class GeneralInformation(models.Model):
+
+    find = models.OneToOneField(
+        Find,
+        related_name="general_information",
+        on_delete=models.CASCADE,
+        verbose_name=_("Allgemein")
+    )
+
+    name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
+    origin = models.TextField(max_length=500, blank=True, verbose_name=_("Herkunft"))
+    storage = models.CharField(
+        max_length=300, null=True, blank=True, verbose_name=_("Stadt, Museum/Sammlung")
+    )
+    find_number = models.CharField(
+        max_length=200, null=True, blank=True, verbose_name=_("Fundnummer")
+    )
+    inven_number = models.CharField(
+        max_length=200,
+        default="",
+        blank=True,
+        null=True,
+        verbose_name=_("Inventarnummer"),
+    )
+
+    source = models.CharField(max_length=300, null=True, blank=True, verbose_name=_("Publikation"))
+
+    description = models.TextField(
+        max_length=400, null=True, blank=True, verbose_name=_("Beschreibung")
+    )

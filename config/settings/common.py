@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "drf_yasg",
+    "drf_spectacular",
     "mptt",
     "stdimage",
     "corsheaders",
@@ -136,9 +136,9 @@ URI_PREFIX = env("URI_PREFIX", default="")
 STATIC_ROOT = str(ROOT_DIR("staticfiles"))
 STATIC_URL = "/static/"
 
-PROFILES_SERIALIZER_MODULE, PROFILES_SERIALIZER_NAME = env(
-    "PROFILES_SERIALIZER", default=""
-).rsplit(".", 1)
+PROFILES_SERIALIZERS = {
+    "find_related": ("ais_content.serializers", "FindSerializer",),
+}
 
 DATABASE_FIELD_MAPPING = {}
 
@@ -150,3 +150,16 @@ STATICFILES_FINDERS = (
 
 # CORS
 CORS_ORIGIN_ALLOW_ALL = True
+
+# Restframework
+REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'AIS API',
+    'DESCRIPTION': "Backend for the e-learning application AIS.",
+    'VERSION': '1.0.0',
+    # OTHER SETTINGS
+}

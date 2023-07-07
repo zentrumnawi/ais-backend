@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ais_content', '0013_auto_20210920_1737'),
+        ("ais_content", "0013_auto_20210920_1737"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='find',
-            name='source',
-            field=models.CharField(blank=True, max_length=300, null=True, verbose_name='Publikation'),
+            model_name="find",
+            name="source",
+            field=models.CharField(
+                blank=True, max_length=300, null=True, verbose_name="Publikation"
+            ),
         ),
     ]

@@ -13,7 +13,6 @@ django-cors-headers = "*"
 django-environ = "*"
 django-mptt = "*"
 djangorestframework = "*"
-drf-yasg = "*"
 gevent = "*"
 gunicorn = "*"
 markupsafe = "==1.1.1"
@@ -21,11 +20,11 @@ pillow = "*"
 psycopg2-binary = "*"
 raven = "*"
 whitenoise = "*"
-solid-backend = {version = "^0.1.24", allow-prereleases = true}
+solid-backend = {version = "*", allow-prereleases = true}
+drf-spectacular = "^0.26.3"
 
 [tool.poetry.dev-dependencies]
 black = "19.10b0"
-codecov = "*"
 coverage = "*"
 django-coverage-plugin = "*"
 django-debug-toolbar = "*"
