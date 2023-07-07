@@ -6,7 +6,7 @@ from solid_backend.content.models import BaseProfile, SolidBaseProfile, TreeNode
 from .choices import *
 
 
-class Find(BaseProfile, SolidBaseProfile):
+class Find(SolidBaseProfile):
     name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
     origin = models.TextField(max_length=500, blank=True, verbose_name=_("Herkunft"))
     storage = models.CharField(
