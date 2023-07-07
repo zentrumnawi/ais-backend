@@ -5,7 +5,7 @@ from solid_backend.media_object.admin import (
 )
 from solid_backend.photograph.admin import PhotographInline
 
-from .models import Find, FormalAspect, Ware
+from .models import Find, FormalAspect, Ware, GeneralInformation
 
 
 class FormalAspectInline(admin.StackedInline):
@@ -16,9 +16,14 @@ class WareInline(admin.StackedInline):
     model = Ware
 
 
+class GeneralInformationInline(admin.StackedInline):
+    model = GeneralInformation
+
+
 class FindModelAdmin(admin.ModelAdmin):
     list_display = ("id",)
     inlines = [
+        GeneralInformationInline,
         FormalAspectInline,
         WareInline,
         ImageMediaObjectInline,

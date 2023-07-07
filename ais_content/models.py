@@ -8,6 +8,28 @@ from .choices import *
 
 class Find(SolidBaseProfile):
 
+    # name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
+    # origin = models.TextField(max_length=500, blank=True, verbose_name=_("Herkunft"))
+    # storage = models.CharField(
+    #     max_length=300, null=True, blank=True, verbose_name=_("Stadt, Museum/Sammlung")
+    # )
+    # find_number = models.CharField(
+    #     max_length=200, null=True, blank=True, verbose_name=_("Fundnummer")
+    # )
+    # inven_number = models.CharField(
+    #     max_length=200,
+    #     default="",
+    #     blank=True,
+    #     null=True,
+    #     verbose_name=_("Inventarnummer"),
+    # )
+    #
+    # source = models.CharField(max_length=300, null=True, blank=True, verbose_name=_("Publikation"))
+    #
+    # description = models.TextField(
+    #     max_length=400, null=True, blank=True, verbose_name=_("Beschreibung")
+    # )
+
     class Meta:
         verbose_name = _("Fundstück")
         verbose_name_plural = _("Fundstücke")
