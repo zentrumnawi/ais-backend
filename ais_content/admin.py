@@ -17,7 +17,7 @@ class WareInline(admin.StackedInline):
 
 
 class FindModelAdmin(admin.ModelAdmin):
-    list_display = ("id", "name")
+    list_display = ("id",)
     inlines = [
         FormalAspectInline,
         WareInline,
