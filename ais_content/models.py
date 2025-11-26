@@ -159,7 +159,7 @@ class GeneralInformation(models.Model):
         Find,
         related_name="general_information",
         on_delete=models.CASCADE,
-        verbose_name=_("Allgemein")
+        verbose_name=_("Allgemein"),
     )
 
     name = models.CharField(max_length=200, null=True, verbose_name=_("Name"))
@@ -178,7 +178,9 @@ class GeneralInformation(models.Model):
         verbose_name=_("Inventarnummer"),
     )
 
-    source = models.CharField(max_length=300, null=True, blank=True, verbose_name=_("Publikation"))
+    source = models.CharField(
+        max_length=300, null=True, blank=True, verbose_name=_("Publikation")
+    )
 
     description = models.TextField(
         max_length=400, null=True, blank=True, verbose_name=_("Beschreibung")
