@@ -37,6 +37,9 @@ pytest-isort = "*"
 pytest-sugar = "*"
 werkzeug = "*"
 
+[tool.poetry.group.dev.dependencies]
+black = "22.3"
+
 [build-system]
 # Should be the same as `$POETRY_VERSION`:
 requires = ["poetry>=1.0.5"]
