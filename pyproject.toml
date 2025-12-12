@@ -24,7 +24,6 @@ solid-backend = {version = "*", allow-prereleases = true}
 drf-spectacular = "^0.26.3"
 
 [tool.poetry.dev-dependencies]
-black = "19.10b0"
 coverage = "*"
 django-coverage-plugin = "*"
 django-debug-toolbar = "*"
@@ -36,6 +35,9 @@ pytest-django = "*"
 pytest-isort = "*"
 pytest-sugar = "*"
 werkzeug = "*"
+
+[tool.poetry.group.dev.dependencies]
+black = "22.3"
 
 [build-system]
 # Should be the same as `$POETRY_VERSION`:

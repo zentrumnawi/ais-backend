@@ -97,9 +97,15 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
 ]
 
 # Internationalization
@@ -137,7 +143,10 @@ STATIC_ROOT = str(ROOT_DIR("staticfiles"))
 STATIC_URL = "/static/"
 
 PROFILES_SERIALIZERS = {
-    "find_related": ("ais_content.serializers", "FindSerializer",),
+    "find_related": (
+        "ais_content.serializers",
+        "FindSerializer",
+    ),
 }
 
 DATABASE_FIELD_MAPPING = {}
@@ -154,12 +163,12 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Restframework
 REST_FRAMEWORK = {
     # YOUR SETTINGS
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'AIS API',
-    'DESCRIPTION': "Backend for the e-learning application AIS.",
-    'VERSION': '1.0.0',
+    "TITLE": "AIS API",
+    "DESCRIPTION": "Backend for the e-learning application AIS.",
+    "VERSION": "1.0.0",
     # OTHER SETTINGS
 }
